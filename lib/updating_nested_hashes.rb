@@ -1,8 +1,9 @@
-epic_tragedy = {
+def update_status
+   epic_tragedy = {
       :montague => {
          :patriarch => {name: "Lord Montague", age: "53"},
          :matriarch => {name: "Lady Montague", age: "54"},
-         :hero => {name: "Romeo", age: "15", status: "dead"},
+         :hero => {name: "Romeo", age: "15", status: "alive"},
          :hero_friends => [
             {name: "Benvolio", age: "17", attitude: "worried"},
             {name: "Mercutio", age: "18", attitude: "hot-headed"}
@@ -11,29 +12,18 @@ epic_tragedy = {
       :capulet => {
          :patriarch => {name: "Lord Capulet", age: "50"},
          :matriarch => {name: "Lady Capulet", age: "51"},
-         :heroine => {name: "Juliet", age: "15", status: "dead"},
+         :heroine => {name: "Juliet", age: "15", status: "alive"},
          :heroine_friends => [
          {name: "Steven", age: "30", attitude: "confused"},
          {name: "Nurse", age: "44", attitude: "worried"}
          ]
-  }
-}
+      }
+   }
 
-def update_status
+  # Write code that changes the status of both Romeo and Juliet from "alive" to "dead"
+  # Code your solution here:
   epic_tragedy[:montague][:hero][2] = "dead"
   epic_tragedy[:capulet][:heroine][2] = "dead"
-end
-
-def add_characters
-  epic_tragedy[:additional_characters] = []
-  epic_tragedy[:additional_characters][0] = {:name => "Prince Escalus"}
-  epic_tragedy[:additional_characters][1] = {:name => "Apothecary"}
-end
-
-
-
-
-
   # After your code, the following code will return the altered hash. This method must only return the modified epic_tragedy hash
   epic_tragedy
 end
